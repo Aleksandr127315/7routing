@@ -1,0 +1,35 @@
+.app {
+	text-align: center;
+	margin: 0 auto; /* центрируем по горизонтали */
+	padding: 20px;
+	max-width: 1000px; /* ограничиваем максимальную ширину */
+}
+
+.main {
+	text-align: center;
+}
+
+.header {
+	font-size: 40px;
+	font-family: 'Arial, sans-serif';
+	font-weight: bold;
+}
+
+.contacts {
+	font-size: 20px;
+	margin-left: 40px;
+}
+
+nav ul {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+}

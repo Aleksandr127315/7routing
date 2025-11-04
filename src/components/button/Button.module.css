@@ -1,0 +1,23 @@
+.button {
+	padding: 10px 18px;
+	margin-left: 8px;
+	background-color: #bfb1c2; /* твой основной цвет */
+	color: rgb(45, 42, 42);
+	border: 2px solid #000;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 18px;
+	transition:
+		background-color 0.3s,
+		transform 0.2s;
+}
+
+.button:hover {
+	background-color: #ad9fac;
+	transform: translateY(-2px);
+}
+
+.button:active {
+	transform: translateY(0);
+}
