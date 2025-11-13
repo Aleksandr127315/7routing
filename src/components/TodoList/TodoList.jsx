@@ -1,4 +1,4 @@
-import { TodoItem } from './todoItem/TodoItem';
+import { TodoItem } from '../TodoItem/TodoItem';
 
 export const TodoList = ({
 	todos,

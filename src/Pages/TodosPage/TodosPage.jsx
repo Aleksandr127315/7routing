@@ -1,10 +1,9 @@
-import { useTodos } from '../hooks/useTodos';
-import { Input } from '../components/input/Input';
-import { Button } from '../components/button/Button';
-import { TodoList } from '../components/TodoList';
-import styles from './Routing.module.css';
-
-export const Routing = () => {
+import { useTodos } from '../../Hooks/useTodos';
+import { Input } from '../../Components/Input/Input';
+import { Button } from '../../Components/Button/Button';
+import { TodoList } from '../../Components/TodoList/TodoList';
+import styles from './TodosPage.module.css';
+export const TodosPage = () => {
 	const {
 		todos,
 		text,
@@ -36,8 +35,9 @@ export const Routing = () => {
 
 	return (
 		<div className={styles.container}>
-			<h1>My Todos</h1>
+			<h1>Список задач</h1>
 
+			{/* Поиск задач */}
 			<Input
 				value={searchTerm}
 				onChange={(e) => setSearchTerm(e.target.value)}
@@ -45,6 +45,7 @@ export const Routing = () => {
 				className={styles.input}
 			/>
 
+			{/* Добавление и сортировка */}
 			<div className={styles.todos}>
 				<Input
 					value={text}
@@ -53,15 +54,14 @@ export const Routing = () => {
 					className={styles.input}
 				/>
 				<Button className={styles.button} onClick={addTodo}>
-					добавить
+					Добавить
 				</Button>
 				<Button onClick={sortTodos} className={styles.button}>
-					{!isSorted
-						? 'отсортировать по алфавиту'
-						: 'отменить сортировку по алфавиту'}
+					{!isSorted ? 'Отсортировать по алфавиту' : 'Сбросить сортировку'}
 				</Button>
 			</div>
 
+			{/* Список задач */}
 			<TodoList
 				todos={todos}
 				editingId={editingId}
